@@ -2,19 +2,22 @@ const tabuleiro = document.getElementById("tabuleiro");
 const celulas = document.getElementsByClassName("celula");
 
 let vezDoJogador = "X";
+let jogoAtivo = true;
 
 for (let i = 0; i < celulas.length; i++) {
   celulas[i].addEventListener("click", function () {
+    if (!jogoAtivo) return;
     if (this.textContent === "") {
       this.textContent = vezDoJogador;
       vezDoJogador = vezDoJogador === "X" ? "O" : "X";
 
       verificarVitoria();
+      verificarEmpate();
     }
   });
 }
 
-function verificarVitoria() {
+function verificarVitoria() { //testado
   if (
     (celulas[0].textContent === "X" &&
       celulas[1].textContent === "X" &&
@@ -44,6 +47,7 @@ function verificarVitoria() {
     setTimeout(() => {
       alert("X venceu!");
     }, 50);
+    jogoAtivo = false;
     return true;
   } else if (
     (celulas[0].textContent === "O" &&
@@ -74,9 +78,21 @@ function verificarVitoria() {
     setTimeout(() => {
       alert("O venceu!");
     }, 50);
+    jogoAtivo = false;
     return true;
   }
   return false;
+}
+
+function verificarEmpate () { //testado
+  const todasPreenchidas = Array.from(celulas).every(celula => celula.textContent !== "");
+
+  if (!verificarVitoria() && todasPreenchidas) {
+    setTimeout(() => {
+      alert("Empate!")
+    }, 50)
+    jogoAtivo = false;
+  }
 }
 
  
