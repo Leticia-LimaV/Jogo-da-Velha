@@ -1,98 +1,37 @@
-const tabuleiro = document.getElementById("tabuleiro");
-const celulas = document.getElementsByClassName("celula");
+const tabuleiro = document.getElementById('tabuleiro');
+const celulas = document.getElementsByClassName('celula');
 
-let vezDoJogador = "X";
+let vezDoJogador = 'X';
 let jogoAtivo = true;
 
-for (let i = 0; i < celulas.length; i++) {
+const combinacoesVencedoras = [
+  [0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]
+];
+
+for( let i = 0; i < celulas.length; i++) {
   celulas[i].addEventListener("click", function () {
-    if (!jogoAtivo) return;
-    if (this.textContent === "") {
-      this.textContent = vezDoJogador;
-      vezDoJogador = vezDoJogador === "X" ? "O" : "X";
+    if(!jogoAtivo || celulas[i].textContent !== "") return;
 
-      verificarVitoria();
-      verificarEmpate();
+    this.textContent = vezDoJogador;
+
+    if(verificarVitoria(vezDoJogador)) {
+      setTimeout(() => alert(`${vezDoJogador} venceu!`, 50));
+      jogoAtivo = false;
+      return;
     }
-  });
+    if(verificarEmpate()) {
+    setTimeout(() => alert("Empate!", 50));
+    jogoAtivo = false;
+    return;
+  }  
+    vezDoJogador = vezDoJogador === "X" ? "O" : "X";
+  })
 }
 
-function verificarVitoria() { //testado
-  if (
-    (celulas[0].textContent === "X" &&
-      celulas[1].textContent === "X" &&
-      celulas[2].textContent === "X") ||
-    (celulas[3].textContent === "X" &&
-      celulas[4].textContent === "X" &&
-      celulas[5].textContent === "X") ||
-    (celulas[6].textContent === "X" &&
-      celulas[7].textContent === "X" &&
-      celulas[8].textContent === "X") ||
-    (celulas[0].textContent === "X" &&
-      celulas[3].textContent === "X" &&
-      celulas[6].textContent === "X") ||
-    (celulas[1].textContent === "X" &&
-      celulas[4].textContent === "X" &&
-      celulas[7].textContent === "X") ||
-    (celulas[2].textContent === "X" &&
-      celulas[5].textContent === "X" &&
-      celulas[8].textContent === "X") ||
-    (celulas[0].textContent === "X" &&
-      celulas[4].textContent === "X" &&
-      celulas[8].textContent === "X") ||
-    (celulas[2].textContent === "X" &&
-      celulas[4].textContent === "X" &&
-      celulas[6].textContent === "X")
-  ) {
-    setTimeout(() => {
-      alert("X venceu!");
-    }, 50);
-    jogoAtivo = false;
-    return true;
-  } else if (
-    (celulas[0].textContent === "O" &&
-      celulas[1].textContent === "O" &&
-      celulas[2].textContent === "O") ||
-    (celulas[3].textContent === "O" &&
-      celulas[4].textContent === "O" &&
-      celulas[5].textContent === "O") ||
-    (celulas[6].textContent === "O" &&
-      celulas[7].textContent === "O" &&
-      celulas[8].textContent === "O") ||
-    (celulas[0].textContent === "O" &&
-      celulas[3].textContent === "O" &&
-      celulas[6].textContent === "O") ||
-    (celulas[1].textContent === "O" &&
-      celulas[4].textContent === "O" &&
-      celulas[7].textContent === "O") ||
-    (celulas[2].textContent === "O" &&
-      celulas[5].textContent === "O" &&
-      celulas[8].textContent === "O") ||
-    (celulas[0].textContent === "O" &&
-      celulas[4].textContent === "O" &&
-      celulas[8].textContent === "O") ||
-    (celulas[2].textContent === "O" &&
-      celulas[4].textContent === "O" &&
-      celulas[6].textContent === "O")
-  ) {
-    setTimeout(() => {
-      alert("O venceu!");
-    }, 50);
-    jogoAtivo = false;
-    return true;
-  }
-  return false;
+function verificarVitoria(jogador) {
+  return combinacoesVencedoras.some(combinacao => combinacao.every(index =>celulas[index].textContent === jogador));
 }
 
-function verificarEmpate () { //testado
-  const todasPreenchidas = Array.from(celulas).every(celula => celula.textContent !== "");
-
-  if (jogoAtivo && todasPreenchidas) {
-    setTimeout(() => {
-      alert("Empate!")
-    }, 50)
-    jogoAtivo = false;
-  }
+function verificarEmpate() {
+  return Array.from(celulas).every(celula => celula.textContent !== "");
 }
-
- 
