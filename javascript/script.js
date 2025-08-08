@@ -87,7 +87,7 @@ function verificarVitoria() { //testado
 function verificarEmpate () { //testado
   const todasPreenchidas = Array.from(celulas).every(celula => celula.textContent !== "");
 
-  if (!verificarVitoria() && todasPreenchidas) {
+  if (jogoAtivo && todasPreenchidas) {
     setTimeout(() => {
       alert("Empate!")
     }, 50)
