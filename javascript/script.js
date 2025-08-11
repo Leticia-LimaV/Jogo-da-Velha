@@ -15,7 +15,7 @@ for( let i = 0; i < celulas.length; i++) {
     this.textContent = vezDoJogador;
 
     if(verificarVitoria(vezDoJogador)) {
-      setTimeout(() => alert(`${vezDoJogador} venceu!`, 50));
+      setTimeout(() => alert(`${vezDoJogador} venceu!`), 50);
       jogoAtivo = false;
       return;
     }
@@ -35,3 +35,11 @@ function verificarVitoria(jogador) {
 function verificarEmpate() {
   return Array.from(celulas).every(celula => celula.textContent !== "");
 }
+
+document.getElementById('reiniciar').addEventListener('click', function () {
+  for (let i = 0; i < celulas.length; i++) {
+    celulas[i].textContent = "";
+  }
+  vezDoJogador = 'X';
+  jogoAtivo = true;
+})
