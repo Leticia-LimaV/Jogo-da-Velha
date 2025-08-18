@@ -67,6 +67,18 @@ h1 {
   color: #dc2626
 }
 
+.celula.vencedora {
+  background-color: #2980b9;
+  color: #fff;
+  font-weight: bold;
+  transition: 0.3s ease;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.6);
+}
+
+.celula.perdedora{
+  color: black;
+}
+
 #reiniciar {
   margin-top: 20px;
   padding: 12px 24px;
