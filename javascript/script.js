@@ -48,7 +48,7 @@ function verificarVitoria(jogador) {
     for (let i = 0; i < celulas.length; i++) {
     if (!combinacao.includes(i)) {
       celulas[i].classList.add("perdedora")
-    }
+    }33
   }  
     return true;
     }
