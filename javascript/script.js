@@ -1,5 +1,6 @@
 const tabuleiro = document.getElementById("tabuleiro");
 const celulas = document.getElementsByClassName("celula");
+const mensagem = document.getElementById("mensagem");
 
 let vezDoJogador = "X";
 let jogoAtivo = true;
@@ -28,12 +29,14 @@ for (let i = 0; i < celulas.length; i++) {
     this.classList.add(vezDoJogador.toLowerCase());
 
     if (verificarVitoria(vezDoJogador)) {
-      setTimeout(() => alert(`${vezDoJogador} venceu!`), 50);
+      mensagem.classList.add("vitoria", "show");
+      mensagem.textContent = `Jogador ${vezDoJogador} venceu o jogo!`;
       jogoAtivo = false;
       return;
     }
     if (verificarEmpate()) {
-      setTimeout(() => alert("Empate!", 50));
+      mensagem.classList.add("empate", "show");
+      mensagem.textContent = `Empate!`;
       jogoAtivo = false;
       return;
     }
@@ -48,7 +51,7 @@ function verificarVitoria(jogador) {
     for (let i = 0; i < celulas.length; i++) {
     if (!combinacao.includes(i)) {
       celulas[i].classList.add("perdedora")
-    }33
+    }
   }  
     return true;
     }
@@ -69,4 +72,8 @@ document.getElementById("reiniciar").addEventListener("click", function () {
   }
   vezDoJogador = "X";
   jogoAtivo = true;
+
+  mensagem.textContent = "";
+  mensagem.classList.remove("vitoria", "empate", "show");
+  
 });
