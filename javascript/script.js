@@ -5,6 +5,12 @@ const mensagem = document.getElementById("mensagem");
 let vezDoJogador = "X";
 let jogoAtivo = true;
 
+//Placar
+
+let pontosX = 0;
+let pontosO = 0;
+let empates = 0;
+
 //Combinações
 
 const combinacoesVencedoras = [
@@ -29,12 +35,25 @@ for (let i = 0; i < celulas.length; i++) {
     this.classList.add(vezDoJogador.toLowerCase());
 
     if (verificarVitoria(vezDoJogador)) {
+      if(vezDoJogador === 'X') {
+        pontosX++;
+      } else {
+        pontosO++;
+      }
+
+      document.getElementById('placar-x').textContent = `X: ${pontosX}`;
+      document.getElementById('placar-o').textContent = `O: ${pontosO}`;
+
       mensagem.classList.add("vitoria", "show");
       mensagem.textContent = `Jogador ${vezDoJogador} venceu o jogo!`;
       jogoAtivo = false;
       return;
+
     }
     if (verificarEmpate()) {
+      empates++;
+      document.getElementById('placar-empates').textContent = `Empates: ${empates++}`;
+
       mensagem.classList.add("empate", "show");
       mensagem.textContent = `Empate!`;
       jogoAtivo = false;
@@ -77,3 +96,13 @@ document.getElementById("reiniciar").addEventListener("click", function () {
   mensagem.classList.remove("vitoria", "empate", "show");
   
 });
+
+document.getElementById("zerar-placar").addEventListener("click", function () {
+  pontosX = 0;
+  pontosO = 0;
+  empates = 0;
+
+  document.getElementById('placar-x').textContent = `X: ${pontosX}`;
+  document.getElementById('placar-o').textContent = `O: ${pontosO}`;
+  document.getElementById('placar-empates').textContent = `Empates: ${empates}`;
+})
