@@ -40,9 +40,6 @@ O primeiro a conseguir vence a partida!
 ├── script.js
 └── README.md
 
-yaml
-Copiar código
-
 ---
 
 ## 🚀 Como Executar
@@ -56,11 +53,20 @@ Divirta-se jogando! 😄
 
 
 ✨ Possíveis Melhorias
+
 Modo de jogo contra o computador (IA)
 
 Efeitos sonoros de clique e vitória
 
 Animações extras nas células
+
+Histórico de partidas
+
+👩‍💻 Autora
+
+Letícia Lima das Virgens
+Desenvolvido como prática de JavaScript e manipulação do DOM.
+💡 Projeto criado para aprimorar habilidades em lógica, interatividade e design front-end.
 
 Histórico de partidas
 
