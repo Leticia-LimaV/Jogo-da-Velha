@@ -54,7 +54,7 @@ Abra o arquivo index.html no seu navegador.
 
 Divirta-se jogando! 😄
 
-✨ Possíveis Melhorias
+## ✨ Possíveis Melhorias
 Modo de jogo contra o computador (IA)
 
 Efeitos sonoros de clique e vitória
