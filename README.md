@@ -65,4 +65,3 @@ Desenvolvido como prática de JavaScript e manipulação do DOM.
 
 ## 📄 Licença
 Este projeto está licenciado sob a Licença MIT — sinta-se à vontade para usar, modificar e distribuir.
-Consulte o arquivo LICENSE para mais informações.
