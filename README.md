@@ -55,19 +55,16 @@ Abra o arquivo index.html no seu navegador.
 Divirta-se jogando! 😄
 
 ## ✨ Possíveis Melhorias
-Modo de jogo contra o computador (IA)
+- Modo de jogo contra o computador (IA)
+- Efeitos sonoros de clique e vitória
+- Animações extras nas células
+- Histórico de partidas
 
-Efeitos sonoros de clique e vitória
-
-Animações extras nas células
-
-Histórico de partidas
-
-👩‍💻 Autora
+## 👩‍💻 Autora
 Letícia Lima das Virgens
 Desenvolvido como prática de JavaScript e manipulação do DOM.
 💡 Projeto criado para aprimorar habilidades em lógica, interatividade e design front-end.
 
-📄 Licença
+## 📄 Licença
 Este projeto está licenciado sob a Licença MIT — sinta-se à vontade para usar, modificar e distribuir.
 Consulte o arquivo LICENSE para mais informações.
