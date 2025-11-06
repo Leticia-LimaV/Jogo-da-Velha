@@ -40,6 +40,9 @@ O primeiro a conseguir vence a partida!
 ├── script.js
 └── README.md
 
+yaml
+Copiar código
+
 ---
 
 ## 🚀 Como Executar
@@ -51,9 +54,15 @@ Abra o arquivo index.html no seu navegador.
 
 Divirta-se jogando! 😄
 
+🖼️ Prévia
+(Opcional: adicione uma imagem ou GIF do jogo)
 
+Exemplo:
+
+markdown
+Copiar código
+![Prévia do jogo](./preview.png)
 ✨ Possíveis Melhorias
-
 Modo de jogo contra o computador (IA)
 
 Efeitos sonoros de clique e vitória
@@ -63,10 +72,95 @@ Animações extras nas células
 Histórico de partidas
 
 👩‍💻 Autora
-
 Letícia Lima das Virgens
 Desenvolvido como prática de JavaScript e manipulação do DOM.
 💡 Projeto criado para aprimorar habilidades em lógica, interatividade e design front-end.
+
+yaml
+Copiar código
+
+---
+
+Quer que eu acrescente uma **versão com emojis coloridos no placar e prévia estilizada com links e badges**, tipo os projetos de portfólio no GitHub?  
+Fica visualmente bem mais profissional e atrativo.
+
+
+
+
+
+
+Você disse:
+Tire a prévia
+
+
+
+O ChatGPT disse:
+Perfeito 👍 Aqui está a versão final do README.md, sem a parte da prévia — direto, bonito e pronto para o GitHub:
+
+markdown
+Copiar código
+# 🕹️ Jogo da Velha Interativo
+
+Um **Jogo da Velha** moderno e responsivo, desenvolvido com **HTML**, **CSS** e **JavaScript**.  
+O projeto foi criado com foco em **design elegante**, **transições suaves** e **interatividade fluida**.
+
+---
+
+## 🎯 Objetivo
+
+O jogador deve formar uma linha (horizontal, vertical ou diagonal) com três símbolos iguais — **X** ou **O**.  
+O primeiro a conseguir vence a partida!
+
+---
+
+## ⚙️ Funcionalidades
+
+✅ Jogo completo para dois jogadores  
+✅ Detecção automática de vitória e empate  
+✅ Mensagem animada com transição visual  
+✅ Destaque das células vencedoras  
+✅ Botão para **reiniciar partida**  
+✅ **Placar de vitórias e empates** com opção de **zerar placar**  
+✅ Interface moderna, responsiva e agradável  
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+- **HTML5** – estrutura do jogo  
+- **CSS3** – layout, gradientes e animações  
+- **JavaScript (ES6)** – lógica do jogo e manipulação do DOM  
+
+---
+
+## 🧩 Estrutura de Arquivos
+
+📁 jogo-da-velha
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
+yaml
+Copiar código
+
+---
+
+## 🚀 Como Executar
+
+1. Baixe ou clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/jogo-da-velha.git
+Abra o arquivo index.html no seu navegador.
+
+Divirta-se jogando! 😄
+
+✨ Possíveis Melhorias
+Modo de jogo contra o computador (IA)
+
+Efeitos sonoros de clique e vitória
+
+Animações extras nas células
 
 Histórico de partidas
 
@@ -74,3 +168,98 @@ Histórico de partidas
 Letícia Lima das Virgens
 Desenvolvido como prática de JavaScript e manipulação do DOM.
 💡 Projeto criado para aprimorar habilidades em lógica, interatividade e design front-end.
+
+yaml
+Copiar código
+
+---
+
+Quer que eu adicione no final uma **licença MIT** (igual aos projetos profissionais do GitHub)? Isso ajuda se quiser deixar o projeto público no portfólio.
+
+
+
+
+
+
+Você disse:
+Sim
+
+
+
+O ChatGPT disse:
+Perfeito 😄 Aqui está o README.md completo, agora com a licença MIT adicionada ao final — pronto para colocar no GitHub:
+
+markdown
+Copiar código
+# 🕹️ Jogo da Velha Interativo
+
+Um **Jogo da Velha** moderno e responsivo, desenvolvido com **HTML**, **CSS** e **JavaScript**.  
+O projeto foi criado com foco em **design elegante**, **transições suaves** e **interatividade fluida**.
+
+---
+
+## 🎯 Objetivo
+
+O jogador deve formar uma linha (horizontal, vertical ou diagonal) com três símbolos iguais — **X** ou **O**.  
+O primeiro a conseguir vence a partida!
+
+---
+
+## ⚙️ Funcionalidades
+
+✅ Jogo completo para dois jogadores  
+✅ Detecção automática de vitória e empate  
+✅ Mensagem animada com transição visual  
+✅ Destaque das células vencedoras  
+✅ Botão para **reiniciar partida**  
+✅ **Placar de vitórias e empates** com opção de **zerar placar**  
+✅ Interface moderna, responsiva e agradável  
+
+---
+
+## 💻 Tecnologias Utilizadas
+
+- **HTML5** – estrutura do jogo  
+- **CSS3** – layout, gradientes e animações  
+- **JavaScript (ES6)** – lógica do jogo e manipulação do DOM  
+
+---
+
+## 🧩 Estrutura de Arquivos
+
+📁 jogo-da-velha
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+
+
+
+---
+
+## 🚀 Como Executar
+
+1. Baixe ou clone este repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/jogo-da-velha.git
+Abra o arquivo index.html no seu navegador.
+
+Divirta-se jogando! 😄
+
+✨ Possíveis Melhorias
+Modo de jogo contra o computador (IA)
+
+Efeitos sonoros de clique e vitória
+
+Animações extras nas células
+
+Histórico de partidas
+
+👩‍💻 Autora
+Letícia Lima das Virgens
+Desenvolvido como prática de JavaScript e manipulação do DOM.
+💡 Projeto criado para aprimorar habilidades em lógica, interatividade e design front-end.
+
+📄 Licença
+Este projeto está licenciado sob a Licença MIT — sinta-se à vontade para usar, modificar e distribuir.
+Consulte o arquivo LICENSE para mais informações.
