@@ -40,8 +40,6 @@ O primeiro a conseguir vence a partida!
 ├── script.js
 └── README.md
 
-yaml
-Copiar código
 
 ---
 
