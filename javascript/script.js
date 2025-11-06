@@ -52,7 +52,7 @@ for (let i = 0; i < celulas.length; i++) {
     }
     if (verificarEmpate()) {
       empates++;
-      document.getElementById('placar-empates').textContent = `Empates: ${empates++}`;
+      document.getElementById('placar-empates').textContent = `Empates: ${empates}`;
 
       mensagem.classList.add("empate", "show");
       mensagem.textContent = `Empate!`;
