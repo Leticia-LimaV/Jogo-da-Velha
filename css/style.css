@@ -22,7 +22,6 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-/* 🔢 Placar */
 #placar {
   display: flex;
   justify-content: center;
@@ -140,7 +139,6 @@ h1 {
   text-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
 }
 
-/* 🎮 Botões */
 #reiniciar,
 #zerar-placar {
   margin-top: 15px;
@@ -167,4 +165,77 @@ h1 {
 #zerar-placar:active {
   transform: scale(0.97);
   box-shadow: 0px 3px 8px rgba(0,0,0,0.25);
+}
+
+@media (max-width: 600px) {
+
+  body {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-top: 20px;
+  }
+
+  #placar {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.1rem;
+    padding: 10px 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  #tabuleiro {
+    grid-template-columns: repeat(3, 80px);
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .celula {
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+  }
+
+  #mensagem {
+    font-size: 1.4rem;
+    min-height: 40px;
+  }
+
+  #reiniciar,
+  #zerar-placar {
+    width: 90%;
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  #placar {
+    font-size: 0.95rem;
+  }
+
+  #tabuleiro {
+    grid-template-columns: repeat(3, 65px);
+    gap: 5px;
+  }
+
+  .celula {
+    width: 65px;
+    height: 65px;
+    font-size: 34px;
+  }
+
+  #reiniciar,
+  #zerar-placar {
+    font-size: 14px;
+  }
 }

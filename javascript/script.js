@@ -5,13 +5,11 @@ const mensagem = document.getElementById("mensagem");
 let vezDoJogador = "X";
 let jogoAtivo = true;
 
-//Placar
 
 let pontosX = 0;
 let pontosO = 0;
 let empates = 0;
 
-//Combinações
 
 const combinacoesVencedoras = [
   [0, 1, 2],
@@ -24,7 +22,6 @@ const combinacoesVencedoras = [
   [2, 4, 6],
 ];
 
-//Evento de click
 
 for (let i = 0; i < celulas.length; i++) {
   celulas[i].addEventListener("click", function () {
