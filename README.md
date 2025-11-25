@@ -60,7 +60,8 @@ Divirta-se jogando! 😄
 
 ## 👩‍💻 Autora
 Letícia Lima das Virgens
--
+
+
 Desenvolvido como prática de JavaScript e manipulação do DOM.
 💡 Projeto criado para aprimorar habilidades em lógica, interatividade e design front-end.
 
