@@ -47,7 +47,7 @@ O primeiro a conseguir vence a partida!
 
 1. Baixe ou clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/jogo-da-velha.git
+   [git clone https://github.com/seu-usuario/jogo-da-velha.git](https://github.com/Leticia-LimaV/Jogo-da-Velha)
 Abra o arquivo index.html no seu navegador.
 
 Divirta-se jogando! 😄
